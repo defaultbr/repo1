@@ -10,7 +10,7 @@ jobs:
       
   
   hello:
-    uses: defaultbr/cicd-base/.github/workflows/pipelines/container/k8s.yaml@main
+    uses: defaultbr/cicd-base/.github/workflows/pipelines/container/k8s/workflow.yaml@main
     with:
       username: "Oi 2"
         
