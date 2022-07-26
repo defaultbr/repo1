@@ -4,12 +4,8 @@ on:
   workflow_dispatch:
   
 jobs:
-  CI:
-    uses: defaultbr/cicd-base/.github/workflows/container-on-kubernetes-CI.yaml@main
+  Pipeline:
+    uses: defaultbr/cicd-base/.github/workflows/container-on-kubernetes.yaml@main
     with:
       username: "Oi CI"
-      
-  CD:
-    uses: defaultbr/cicd-base/.github/workflows/container-on-kubernetes-CD.yaml@main
-    with:
-      username: "Oi CD"
+  
