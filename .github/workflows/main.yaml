@@ -1,9 +1,14 @@
 name: hello-world
-on: push
+on: 
+  workflow_dispatch:
+  
 jobs:
-  do-it:
-    - uses: defaultbr/cicd-base/.github/workflows/container/k8s.yaml
-      with:
-        username: "NOME 1"
-   
+  doIt:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "doit"
+      
+  
+  hello:
+    uses: defaultbr/cicd-base/.github/workflows/container/k8s.yaml@main
         
