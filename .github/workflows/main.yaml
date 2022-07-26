@@ -8,12 +8,8 @@ jobs:
     uses: defaultbr/cicd-base/.github/workflows/container-on-kubernetes-CI.yaml@main
     with:
       username: "Oi CI"
+      
   CD:
     uses: defaultbr/cicd-base/.github/workflows/container-on-kubernetes-CD.yaml@main
     with:
-      username: "Oi CD"      
-        
-#   doIt:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - run: echo "doit"
+      username: "Oi CD"
