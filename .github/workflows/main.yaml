@@ -2,10 +2,7 @@ name: hello-world
 on: push
 jobs:
   my-job:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: ./.github/workflows/my-action
-      - name: my-step
-        run: echo "Hello World!"
+    - uses: defaultbr/cicd-base/pipelines/container/k8s/workflow.yaml
+# - uses: octo-org/example-repo/.github/workflows/reusable-workflow.yml@main
         
         
