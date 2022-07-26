@@ -11,4 +11,6 @@ jobs:
   
   hello:
     uses: defaultbr/cicd-base/.github/workflows/container-on-k8s.yaml@main
+    with:
+      username: "Oi 1"
         
