@@ -1,8 +1,9 @@
 name: hello-world
 on: push
 jobs:
-  my-job:
-    - uses: defaultbr/cicd-base/pipelines/container/k8s/workflow.yaml
-# - uses: octo-org/example-repo/.github/workflows/reusable-workflow.yml@main
-        
+  do-it:
+    - uses: defaultbr/cicd-base/pipelines/container/k8s/workflow.yaml@main
+      with:
+        username: "NOME 1"
+   
         
