@@ -12,7 +12,8 @@ jobs:
   Pipeline:
     uses: defaultbr/cicd-base/.github/workflows/container-on-kubernetes.yaml@main
     secrets:
-      ENVIRONMENT: ${{ env.ENVIRONMENT }}
+      SECRET_FROM_ACTION_SECRETS: ${{ secrets.SECRET_FROM_ACTION_SECRETS }}
+      ENVIRONMENT: ${{ secrets.ENVIRONMENT }}
     with:
       username: "Oi CI"
   
