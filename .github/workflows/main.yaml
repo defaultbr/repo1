@@ -4,8 +4,15 @@ on:
   workflow_dispatch:
   
 jobs:
+  printAny:
+    runs-on: ubuntu-latest
+    steps:
+      - run: printenv | sort
+      
   Pipeline:
     uses: defaultbr/cicd-base/.github/workflows/container-on-kubernetes.yaml@main
+    secrets:
+      ENVIRONMENT: ${{ env.ENVIRONMENT }}
     with:
       username: "Oi CI"
   
