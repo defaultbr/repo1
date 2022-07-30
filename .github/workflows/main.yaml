@@ -8,12 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: printenv | sort
+
+      - run:  echo ${{ secrets.SECRET_FROM_ACTION_SECRETS }}
+      - run: echo ${{ secrets.ENVIRONMENT }}      
       
   Pipeline:
     uses: defaultbr/cicd-base/.github/workflows/container-on-kubernetes.yaml@main
-    secrets:
-      SECRET_FROM_ACTION_SECRETS: ${{ secrets.SECRET_FROM_ACTION_SECRETS }}
-      ENVIRONMENT: ${{ secrets.ENVIRONMENT }}
+
     with:
       username: "Oi CI"
   
