@@ -4,25 +4,22 @@ on:
   workflow_dispatch:
   
 jobs:
-  printAny:
-    runs-on: ubuntu-latest
-    environment: homologation
-    steps:
-      - run: printenv | sort
-      - run: echo SECRET_FROM_ACTION_SECRET ${{ secrets.SECRET_FROM_ACTION_SECRETS }}
-      - run: echo Environment => ${{ secrets.ENVIRONMENT }}    
-      - run: |
-          if [[ "${{ secrets.environment }}" == "homologation" ]]; then
-              echo "homologation"
-          elif [[ "${{ secrets.environment }}" == "production" ]]; then
-              echo "production"
-          else
-              echo "Strings are equal"
-          fi
+#   printAny:
+#     runs-on: ubuntu-latest
+#     environment: homologation
+#     steps:
+#       - run: printenv | sort
+#       - run: echo SECRET_FROM_ACTION_SECRET ${{ secrets.SECRET_FROM_ACTION_SECRETS }}
+#       - run: echo Environment => ${{ secrets.ENVIRONMENT }}    
+#       - run: |
+#           if [[ "${{ secrets.environment }}" == "homologation" ]]; then
+#               echo "homologation"
+#           elif [[ "${{ secrets.environment }}" == "production" ]]; then
+#               echo "production"
+#           else
+#               echo "Strings are equal"
+#           fi
 
   Pipeline:
-    uses: defaultbr/cicd-base/.github/workflows/container-on-kubernetes.yaml@main
-
-    with:
-      username: "Oi CI"
+    uses: defaultbr/cicd-base/.github/workflows/container-on-kubernetes.yaml@main"
   
