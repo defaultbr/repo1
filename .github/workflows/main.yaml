@@ -10,7 +10,15 @@ jobs:
     steps:
       - run: printenv | sort
       - run: echo SECRET_FROM_ACTION_SECRET ${{ secrets.SECRET_FROM_ACTION_SECRETS }}
-      - run: echo Environment => ${{ secrets.ENVIRONMENT }}      
+      - run: echo Environment => ${{ secrets.ENVIRONMENT }}    
+      - run: |
+          if [ "$ENVIRONMENT" = "homologation" ]; then
+            echo "É Homologation"
+          elif [ "$ENVIRONMENT" = "production"]; then
+            echo "É production"
+          else
+              echo "Nenhum ambiente"
+          fi          
       
   Pipeline:
     uses: defaultbr/cicd-base/.github/workflows/container-on-kubernetes.yaml@main
