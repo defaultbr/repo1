@@ -21,5 +21,5 @@ jobs:
 #           fi
 
   Pipeline:
-    uses: defaultbr/cicd-base/.github/workflows/container-on-kubernetes.yaml@main"
+    uses: defaultbr/cicd-base/.github/workflows/container-on-kubernetes.yaml@main
   
